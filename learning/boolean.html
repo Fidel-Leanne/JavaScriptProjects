@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper scissors</title>
 </head>
-<p> Welcome to the Rock , Paper , scissors</p>
+<h1>Welcome to rock paper scissors &#9994;	&#128196;  &#9986;
+
+</h1>
 <button onclick="
 
 playGame('rock')
 
-"> ROCK</button>
+"> &#9994;</button>
 <button onclick="
 
 
 playGame('paper')
-"> PAPER</button>
+"> &#128196;
+</button>
 
 
 <button onclick="
 
 playGame('scissors');
 "
->SCISSORS</button>
+>&#9986;</button>
 
 <body>
  <script>
@@ -60,14 +63,17 @@ const randomNumber=Math.random();
         else if (computerMove==='scissors'){
             alert('TIE!!!!')
         }
-            }   else if (playerMove ==='paper'){
+            }  
+            
+            else if (playerMove ==='paper'){
                 if (computerMove=== 'rock'){
                     alert ('WIN!')
             } else if(computerMove=== 'paper'){
                 alert("It's a tie!")
             }else if( computerMove=== 'scissors'){
                 alert ("Lose")
-            }}
+            }
+        }
 
         else if (playerMove ==='rock'){
                 if (computerMove=== 'rock'){
