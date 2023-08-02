@@ -21,13 +21,26 @@
 playGame('scissors');"
 >&#9986;</button>
 
+<p class="js-score">
+    
+</p>
+
+<p class="js-result">
+</p>
+
+<p class="js-table">
+</p>
+
     <button onclick="
     score.losses=0;
     score.ties=0;
     score.wins=0;
-    localStorage.removeItem('score')">
+    localStorage.removeItem('score')
+    
+    updateScoreElement();">
         RESET SCORE
     </button>
+    
 
 <body>
  <script>
@@ -39,7 +52,8 @@ playGame('scissors');"
         ties :0 ,
         wins:0
         };
-  
+
+        
 
   let playerMove=''
 
@@ -47,7 +61,16 @@ playGame('scissors');"
     const lose = 'You Lose!';
     const tie=  'TIE ';
 
+    updateScoreElement();
 
+    
+    function updateScoreElement(){
+                        document.querySelector('.js-score')
+                        .innerHTML=`Wins : ${score.wins}, Ties : ${score.ties}, losses: ${score.losses}`    
+
+}
+
+   
 
 function pickComputerMoves(){
 
@@ -66,7 +89,6 @@ const randomNumber=Math.random();
         return computerMove;
 }
 
-pickComputerMoves()
     
   function playGame(playerMove){
 
@@ -122,8 +144,24 @@ pickComputerMoves()
 
             localStorage.setItem('score',JSON.stringify(score))
 
-  return alert(result + `Wins : ${score.wins}, Ties : ${score.ties}, losses: ${score.losses}` );
 
+            updateScoreElement();
+
+            document.querySelector('.js-result')
+                  .innerHTML= result;
+
+            document.querySelector('js-table')
+                .innerHTML=`You ${playerMove}- ${computerMove} co`;
+           return alert(result );
+
+           
+
+ 
+
+
+            
+
+ 
 
 }
  </script>   
