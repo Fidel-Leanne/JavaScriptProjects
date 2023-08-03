@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper scissors</title>
+    <link rel="stylesheet" href="rockPaperScissors.css">
+
 </head>
 <h1>Welcome to rock paper scissors &#9994;	&#128196;  &#9986;
 
@@ -28,7 +30,9 @@ playGame('scissors');"
 <p class="js-result">
 </p>
 
-<p class="js-table">
+<p class="js-table"
+onclick="">
+    
 </p>
 
     <button onclick="
@@ -37,7 +41,7 @@ playGame('scissors');"
     score.wins=0;
     localStorage.removeItem('score')
     
-    updateScoreElement();">
+    updateScoreElement();" class="reset-button">
         RESET SCORE
     </button>
     
@@ -151,7 +155,8 @@ const randomNumber=Math.random();
                   .innerHTML= result;
 
             document.querySelector('js-table')
-                .innerHTML=`You ${playerMove}- ${computerMove} co`;
+                .innerHTML=result;
+
            return alert(result );
 
            
