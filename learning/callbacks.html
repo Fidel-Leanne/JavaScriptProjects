@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let stock={
+            fruits:['apple', 'banana', 'grapes','kiwi'],
+            liquid:['water','ice'],
+            holder: ['cone', 'cup']
+        }
+
+
+
+
+
+      let order =  (fruitName , call_production)=>{
+        
+        setTimeout(
+        ()=>{
+        console.log(`${stock.fruits[fruitName]} was selected` )
+        call_production()
+
+            },2000)
+        }
+
+        let production= ()=>{
+            setTimeout(() => {
+            console.log('order received , start production')
+            }, 0);
+
+            setTimeout(()=>
+                console.log(`product ${stock.holder} is ready to ship `)),3
+
+            }
+        
+
+        order(0, production)
+    </script>
+</body>
+</html>
