@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="paragraph"></p>
+    
+    <script>
+        let word1= 'dylan'
+        let word2=' effy'
+
+        let fulname= `${word1} ${word2}`
+
+        console.log(fulname)
+
+        document.getElementById('paragraph').innerText= fulname;
+
+        const personalInfo={
+        firstName:'Dylan',
+        lastName: '<NAME>',
+        age : 34 ,
+        emailAddress:"<EMAIL>",
+        phoneNumber :"5679",
+        address:{
+            streetName:"Mohammadpur",
+            city:"Dhaka",
+             country:"Bangladesh"
+                    }
+                    };
+
+       const {firstName: fn, lastName:ln}= personalInfo;
+
+       
+       console.log(`${fn},${ln}`);
+
+       let [firstName, lastName] = [ 'dylan' ,'frog', 'lab']
+
+       console.log(firstName, lastName)
+
+
+
+    </script>
+
+ 
+       
+</body>
+</html>
