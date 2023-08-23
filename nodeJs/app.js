@@ -24,9 +24,10 @@ readFile('./content/second.txt',
     'utf8',(err, result)=>{
       if(err ){
         console.log("No content")
-        }else{
+        return
+        }
           console.log(`Content is ${result}`)
-          }
+          
     } )
 
 
