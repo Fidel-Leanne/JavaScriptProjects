@@ -9,4 +9,25 @@ readFile('./content/first.txt', 'utf8', (err, result)=>{
   console.log(result)  
     
 })
-writeFile('')
+
+
+writeFile("./content/second.txt",
+"Hello World! its fidel", "utf-8" ,(err,result )=>{
+  if (err){
+    console.log("error", err)
+  }
+  console.log(result)
+  } );
+
+
+readFile('./content/second.txt', 
+    'utf8',(err, result)=>{
+      if(err ){
+        console.log("No content")
+        }else{
+          console.log(`Content is ${result}`)
+          }
+    } )
+
+
+
