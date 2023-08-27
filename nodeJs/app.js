@@ -29,6 +29,6 @@ readFile('./content/second.txt',
           console.log(`Content is ${result}`)
           
     } )
-
+ console.log('HEYY PEOPLE')
 
 
