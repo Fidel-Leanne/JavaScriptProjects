@@ -14,6 +14,7 @@ app.get('/hello',(req,res)=>{
 app.use('/api/v1/tasks', tasks)
 
 app.listen(port,()=>{
+    
     console.log(`Server is running on port ${port}`)
 })
 
