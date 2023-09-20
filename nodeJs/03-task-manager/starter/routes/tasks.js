@@ -1,11 +1,13 @@
-const express = require('express');
-const router = express.Router();
-const {getAllTasks, getTask, createTasks,updateTask, deleteTask}= require('../controllers/tasks')
+const express= require('express')
+const router= express.Router();
+
+const app= express()
+
+router.route('/').get((req,res)=>{
+   res.send('Welcome') 
+})
 
 
-router.route('/').get(getAllTasks)
-.post(createTasks)
+module.exports = router
 
-router.route('/:id').get(getTask).patch(updateTask).delete(deleteTask)
 
-module.exports = router;
